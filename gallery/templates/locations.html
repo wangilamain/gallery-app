@@ -1,0 +1,71 @@
+{% extends 'base.html'%}
+{% load bootstrap4 %}
+{% load static %}
+{% block styles %}
+{{ block.super }}
+{% bootstrap_css %}
+<link rel="stylesheet" href="{% static 'css/locations.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<body>
+    <div class="container">
+     <div class="text-center mt-4 mb-5">
+        <h1>OUR CURRENT LOCATIONS</h1>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2">
+        <div class="col mb-4">
+            <div class="card text-white">
+              <img class="card-img" src="https://res.cloudinary.com/dw9y1xy4x/image/upload/v1603359971/Locations/Africa_r7sidf.jpg" alt="Card image cap">
+              <div class="card-img-overlay">
+                <a href ="{%url 'locations' 'Africa' %}" style="text-decoration: none; color: aliceblue;"><h1 class="card-link" >Africa</h1></a>
+              </div>
+            </div>
+           </div>
+           <div class="col mb-4">
+            <div class="card text-white">
+                <img class="card-img" src="https://res.cloudinary.com/dw9y1xy4x/image/upload/v1603360144/Locations/N_America_drqwbr.jpg" alt="Card image cap">
+                <div class="card-img-overlay">
+                  <a href ="{%url 'locations' 'N_America' %}" style="text-decoration: none; color: aliceblue;"><h1 class="card-link" >North America</h1></a>
+                  
+                </div>
+              </div>
+            </div>
+              <div class="col mb-4">
+              <div class="card text-white">
+                <img class="card-img" src="https://res.cloudinary.com/dw9y1xy4x/image/upload/v1603360315/Locations/S_America_tgtjku.jpg" alt="Card image cap">
+                <div class="card-img-overlay">
+                  <a href ="{%url 'locations' 'S_America' %}" style="text-decoration: none; color: aliceblue;"><h1 class="card-link" >South America</h1></a>
+                  
+                </div>
+            </div>
+              </div>
+              <div class="col mb-4">
+              <div class="card text-white">
+                <img class="card-img" src="https://res.cloudinary.com/dw9y1xy4x/image/upload/v1603360595/Locations/Asia_i3hujq.jpg" alt="Card image cap">
+                <div class="card-img-overlay">
+                  <a href ="{%url 'locations' 'Asia' %}" style="text-decoration: none; color: aliceblue;"><h1 class="card-link">Asia</h1></a>
+                  
+                </div>
+
+              </div>
+            </div>
+              <div class="col mb-4">
+              <div class="card text-white">
+                <img class="card-img" src="https://res.cloudinary.com/dw9y1xy4x/image/upload/v1603360781/Locations/Australia_eeskpw.jpg" alt="Card image cap">
+                <div class="card-img-overlay">
+                <a href ="{%url 'locations' 'Australia' %}" style="text-decoration: none; color: aliceblue;"><h1 class="card-link" >Australia</h1></a>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    {% block scripts %}
+            <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+            {% bootstrap_javascript %}
+        {% endblock %}
+</body>
+{% endblock %}
