@@ -24,7 +24,7 @@ The user will be able to:
 ## Set up and Installation
 ### Prerequisites
 
-1. Python3.8
+1. Python3.6
 1. git
 1. Django
 1. Cloudinary
