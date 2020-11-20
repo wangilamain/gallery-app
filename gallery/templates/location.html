@@ -32,16 +32,10 @@
                 </div>
             </div>
         </div>
-
-        <div class="pax">
-            <div class="pax-text">
-                <h1>Welcome to My gallery</h1>
-                <h3>You can view images of any continent</h3>
-            </div>
-        </div>
         <br>
         {% if images %}
         <div class="container">
+            <h1 class="text-center">Photos From {{title}}</h1>
             <div class="row row-cols-1 row-cols-md-3">
                 {% for image in images %}
                 <div class="col mb-4">

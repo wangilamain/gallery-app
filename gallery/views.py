@@ -5,7 +5,7 @@ from .models import Image, Location, Category
 # Create your views here.
 
 def index(request):
-    title = 'Welcome to MyLouvre'
+    title = 'Welcome to My gallery'
     images = Image.objects.all()
 
     if 'search_term' in request.GET and request.GET["search_term"]:

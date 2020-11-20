@@ -1,6 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
-
+import cloudinary
 # Create your models here.
 class Location(models.Model):
     name = models.CharField(max_length = 30)
@@ -50,6 +50,10 @@ class Image(models.Model):
 
     def update_image(self, val):
         Image.objects.filter(id = self.id).update(name=val)
+
+    @classmethod
+    def update(cls, id, val):
+        cls.objects.get(id = id).update(field=val)
 
     @classmethod
     def get_image_by_id(cls,image_id):
