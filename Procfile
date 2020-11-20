@@ -1,1 +1,1 @@
-web: gunicorn migall.wsgi
+web: gunicorn migall.wsgi --log-file -
