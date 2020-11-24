@@ -38,8 +38,7 @@ if config('MODE')=="dev":
 else:
    DATABASES = {
        'default': dj_database_url.config(
-           default=config('DATABASE_URL')
-       )
+           default='postgres://sharon:wangilamain@localhost/gallery'       )
    }
 
 db_from_env = dj_database_url.config(conn_max_age=500)
